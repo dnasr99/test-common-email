@@ -64,4 +64,16 @@ public class EmailTest {
 		assertEquals("Local Host", hostname);
 	}
 
-	
+	@Test
+	public void buildMimeMessage() throws EmailException {
+		
+		email.setHostName("local host");
+		email.setSmtpPort(12251999);
+		email.setFrom("dalia@g.com");
+		email.addTo("abc@cd.com");
+		email.setSubject("EMAIL TEST");
+     	email.setContent("testing content", "text/plain");
+     	email.addReplyTo("waddup@gui.com");
+     	
+		email.buildMimeMessage();
+	}
