@@ -96,4 +96,7 @@ public class EmailTest {
 		assertEquals(new Date(4), email.sentDate());
 	}
 
-	
+	@Test 
+	public void sentDateTestTwo() {
+		email.sentDate();
+	}
